@@ -1,0 +1,20 @@
+{
+  "name": "tme",
+  "version": "1.0.0",
+  "description": "building my own testing framework in node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stelthdroid8/tme.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stelthdroid8/tme/issues"
+  },
+  "homepage": "https://github.com/stelthdroid8/tme#readme"
+}
