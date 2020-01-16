@@ -25,6 +25,12 @@ class Runner {
       }
     }
   }
+
+  async runTests() {
+    for (let file of this.testFiles) {
+      require(file.name);
+    }
+  }
 }
 
 module.exports = Runner;
