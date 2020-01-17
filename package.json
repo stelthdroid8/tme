@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/stelthdroid8/tme/issues"
   },
-  "homepage": "https://github.com/stelthdroid8/tme#readme"
+  "homepage": "https://github.com/stelthdroid8/tme#readme",
+  "dependencies": {
+    "chalk": "^3.0.0"
+  }
 }
