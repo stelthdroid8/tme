@@ -28,7 +28,27 @@ class Runner {
 
   async runTests() {
     for (let file of this.testFiles) {
-      require(file.name);
+      const beforeEaches = [];
+      global.beforeEach = fn => {
+        beforeEaches.push(fn);
+      };
+      global.it = (desc, fn) => {
+        // console.log(desc);
+        beforeEaches.forEach(func => func());
+        try {
+          fn();
+          console.log(`OK - ${desc}`);
+        } catch (err) {
+          console.log(`X -  ${desc}`);
+          console.log('\t', err.message);
+        }
+      };
+      try {
+        require(file.name);
+      } catch (err) {
+        console.log('X -- Error Loading Files', file.name);
+        console.log('\t', err.message);
+      }
     }
   }
 }
